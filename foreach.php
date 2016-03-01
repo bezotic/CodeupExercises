@@ -12,7 +12,7 @@ foreach($things as $item) {
 		
 	 foreach($item as $innerItem) {
 		echo "$innerItem\n";
-}
+	}
 	}
 }
 
