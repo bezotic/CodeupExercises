@@ -1,18 +1,19 @@
 <?php
 
-function throwErrorMessage($a, $b, $divide = false) {
-	if (is_numeric($a)&& is_numeric($b)) {
-		return $a + $b;
-	} else {
-		echo "Error! {$a} and {$b} must be numbers\n";
-	}
+
+function throwErrorMessage($a, $b, $divide = true) {
 	if ($divide == false) {
 		echo "You cannot divide by zero" .PHP_EOL;
-	} else {
-		return true;
-	}
-}
+		return false;
+	} 
 
+	if (is_numeric($a)&& is_numeric($b)) {
+		return $a + $b;
+    } else {
+    	echo "Error! {$a} and {$b} must be numbers";
+	  }
+
+}
 
 function add($a, $b){ 
 	     if (throwErrorMessage($a, $b)){
@@ -20,7 +21,7 @@ function add($a, $b){
 	     }
 }
 
-	echo add(a, b) .PHP_EOL;
+	echo add(1, 2) .PHP_EOL;
 
 function subtract($a, $b) {
 	if (throwErrorMessage($a, $b)) {
@@ -41,7 +42,7 @@ function multiply($a, $b) {
 	echo multiply(5, 5) .PHP_EOL;
 
 function divide($a, $b){
-	if (throwErrorMessage($a, $b)) {
+	if (throwErrorMessage($a, $b, $b != 0)) {
 		 return $a / $b;
 	}
    
