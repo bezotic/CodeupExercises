@@ -2,16 +2,20 @@
 
 
 
-for ($i = 2; $i <= 100; $i +=2) {
-	echo "$i\n";
-	if ($i > 10) {
+for ($i = 1; $i <= 100; $i++) {
+	if ($i % 2 != 0) {
 		continue;
+		
 	}
-}
-
-for ($i =2; $i <= 100; $i +=2) {
 	echo "$i\n";
-	if ($i == 10) {
-		break ;
+}	
+
+
+for ($i = 1; $i <= 100; $i++) {
+	if ($i % 2 != 0) {
+		continue;
+	} else if ($i > 10) {
+		break;
 	}
+	echo "$i\n";
 }
