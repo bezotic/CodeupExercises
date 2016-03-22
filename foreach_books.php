@@ -22,33 +22,27 @@ $books = array(
         'pages' => 544
     )
 );
-
-foreach($books as $key => $title) {
-    foreach ($title as $info => $innerInfo) {
-     echo " {$key} {$info}  {$innerInfo}\n";         
-    } 
+// foreach loop to get info inside the arrays.
+foreach($books as $book => $info) {
+   echo "{$book}" .PHP_EOL;
+   foreach($info as $key => $innerInfo) {
+    echo " {$key} {$innerInfo}" .PHP_EOL;
+   }
+    echo "=======================".PHP_EOL;
+    echo PHP_EOL;
+}
+ // Skipped through each array to only spit out books published after 1950  
+foreach($books as $book => $info) {
+    echo "$book" .PHP_EOL;
+   foreach($info as $key => $innerInfo) {
+    if($innerInfo > 1950) {
+      echo " {$key} {$innerInfo}" .PHP_EOL;
+    }
+   }
 }
 
 
-foreach ($books as $key => $title) {
-        if ($['published'] > 1950) {    
-            echo "Title: {$key} " . PHP_EOL;
-            echo "Published: {$book['published']} " . PHP_EOL;
-            echo "Author: {$book['author']} " . PHP_EOL;
-            
-        }
-    }
 
-
-
-//foreach($books as $key => $value) {
-//	echo "Title: {$key}\n";
- //	foreach ($value as $book) {
- 	//	echo  "Published: {$book['published']}\n";
- 	//	echo  "Author: {$book['author']}\n";
- 	//	echo  "Pages: {$book['pages']}\n";
- 	//} 
-//}
 
 
 

@@ -23,3 +23,10 @@ do {
 	$a *=$a;
 
 }while($a < 1000000);
+
+
+while ($firstname == "\n");
+
+
+
+exit(0);

@@ -54,39 +54,4 @@ foreach($languages as $language) {
 
 print_r($capitalizedLanguages);
 
-function combineArrays($array1, $array2) {
-	$array3 = [];
-	foreach($array1 as $key => $value) {
-		if($array1[$key] === $array2[$key]) {
-			$array3[] = $array1[$key];
-		} else {
-			
-			$array3[] = $array1[$key];
-			$array3[] = $array2[$key];
-		}
-		
-	}
-		return $array3;
-}
-
-print_r(combineArrays($names,$compare));
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

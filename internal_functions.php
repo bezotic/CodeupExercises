@@ -21,42 +21,42 @@ $null = NULL;
 
 // TODO: Create your inspect() function here
 function inspect($element){
-	// check if STRING and is EMPTY
-	if(is_string($element) && $element == ""){
-		echo "The String is empty" . PHP_EOL;
-	}
-	// check if ARRAY
+	if(is_string($element) && $element == "") {
+		echo "The value is an empty string" .PHP_EOL;
+	} 
+
 	elseif(is_array($element)) {
 		if(empty($element)) {
 			echo "The value is an empty array" .PHP_EOL;
 		} else {
-			echo "the value is an array" .PHP_EOL;
-
-			foreach($element as $array) {
-				echo $array .PHP_EOL;
-			}
+			echo "The value is an array" .PHP_EOL;
+			foreach($element as $array)
+				echo $array . PHP_EOL;
 		}
-	}					
-	// check if value is NULL
-	elseif(is_null($element)) {
-		echo "the value is NULL";
 	}
 
-	// check if BOOLEAN
-	elseif(is_bool($element)) {
+	elseif(is_bool($element)) { 
 		if($element == true) {
-			echo  "TRUE";
+			echo "The value is True" .PHP_EOL;
 		} else {
-			echo "FALSE";
+			echo "The value is False" .PHP_EOL;
 		}
-	}		
+	}
 
-	// display TYPE and VALUE
+	elseif(is_null($element)) {
+		echo "The value is null" .PHP_EOL;
+	}
+
 	else {
 		gettype($element);
-		echo "the value is {$element}";
+		echo "The value is {$element}" . PHP_EOL;
 	}
-}	
+
+
+
+}
+	
+		
 
 
 	
